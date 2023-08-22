@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    article {
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      width: 100%;
+      background-color: #0c8573;
+      padding: 6px;
+      border-radius: 5px;
+      font-size: bolder;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    footer {
+      background-color: blue;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .container-destaques{
+      text-align: center;
+      align-items: center;
+    }
+
+    .column-container1 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 0.2fr));
+      justify-content: center;
+      background-color: #0c8573;
+      margin: 50px;
+    }
+
+    .column1 {
+      flex: 1;
+      padding: 10px;
+      display: flex;
+      flex-direction:column;
+      text-align: center;
+    }
+
+    .news-image1 {
+      width: 100%;
+      /* Definir largura da imagem */
+      max-height: 200px;
+      /* Definir altura máxima da imagem */
+      object-fit: cover;
+      /* Manter proporções da imagem */
+      margin-bottom: 10px;
+      /* Espaço entre imagem e título */
+    }
+
+    .news-title1 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .news-text1 {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: auto;
+      /* Empurrar o texto para a parte inferior da coluna */
+    }
+
+    .capa {
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .capa img {
+      width: 100%;
+      height: auto;
+      top: 0;
+      left: 0;
+    }
+
+    .titulo-geral {
+      text-align: center;
+    }
+
+    .column-container {
+      max-width: 100px;
+      display: flex;
+      justify-content: space-evenly;
+      background-color: #0c8573;
+      padding: 1rem;
+      align-items: center;
+      text-align: center;
+      margin: 1.5rem;
+
+    }
+
+    .column {
+      padding: 5px;
+    }
+
+    .column:last-child {
+      border-right: none;
+    }
+
+    .news-topic {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 300px;
+      margin: 20px auto;
+      ;
+      text-align: left;
+    }
+
+    .news-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .news-title {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .news-text {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .sustentabilidade,
+    .projetos,
+    .ambiental {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 0.2fr));
+      gap: 20px;
+      justify-content: center;
+    }
+  </style>
+
+  <div class="capa">
+    <img src="/Imagem/bd2.jpg" alt="bondinho">
+  </div>
+</head>
+
+<body>
+  <main>
+
+    <article>
+      <h2 class="titulo-geral">Destaques</h2>
+      <div class="column-container1">
+        <div class="column1">
+          <img class="news-image1" src="/Imagem/reaproveitamento_de_agua.png" alt="Imagem 1" height="200px">
+          <p class="news-text1">Conteúdo da Notícia 1...</p>
+        </div>
+        <div class="column1">
+          <img class="news-image1" src="/Imagem/mosaicos-bondinho-santa-teresa.jpg" alt="Imagem 2" height="200px">
+          <p class="news-text1">Conteúdo da Notícia 2...</p>
+        </div>
+        <div class="column1">
+          <img class="news-image1" src="/Imagem/caminhao_descarte_lampadas.png" alt="Imagem 3"
+          height="200px">
+          <p class="news-text1">Conteúdo da Notícia 3...</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2 class="titulo-geral">SUSTENTABILIDADE</h2>
+      <div class="sustentabilidade">
+        <div class="news-topic">
+          <img class="" src="/Imagem/bond1.jpg" alt="Imagem da Notícia" width="300" height="178.58">
+          <h2 class="news-title">BONDE DE SANTA TERESA GANHA SEU SELO DE SUSTENTABILIDADE</h2>
+          <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed justo non leo tristique fringilla. Quisque volutpat orci vel neque mollis, sit amet vehicula tellus consectetur. Etiam eget tortor malesuada, feugiat elit at, posuere orci.</p>
+          <a href="">CLIQUE AQUI PARA LER MAIS</a>
+
+        </div>
+        <div class="news-topic">
+          <img class="news-image" src="/Imagem/bonde22.jpg" alt="Imagem da Notícia">
+          <h2 class="news-title">VOCÊ SABIA: O BONDE DE SANTA TERESA É UM MEIO DE TRANSPORTE ECO FRIENDLY </h2>
+          <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed justo non leo tristique fringilla. Quisque volutpat orci vel neque mollis, sit amet vehicula tellus consectetur. Etiam eget tortor malesuada, feugiat elit at, posuere orci.</p>
+          <a href="">CLIQUE AQUI PARA LER MAIS</a>
+        </div>
+      </div>
+      <h2 class="titulo-geral">PROJETOS</h2>
+      <div class="projetos">
+        <div class="news-topic">
+          <img class="news-image" src="/Imagem/presidencia.jpg" alt="Imagem da Notícia">
+          <h2 class="news-title">CENTRAL LOGÍSTICA DESEJA IMPLANTAR AÇÕES COM FOCO NA PRESERVAÇÃO DO AMBIENTE
+          </h2>
+          <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed justo non leo tristique fringilla. Quisque volutpat orci vel neque mollis, sit amet vehicula tellus consectetur. Etiam eget tortor malesuada, feugiat elit at, posuere orci.</p>
+          <a href="">CLIQUE AQUI PARA LER MAIS</a>
+        </div>
+        <div class="news-topic">
+          <img class="news-image" src="/Imagem/planta.jpg" alt="Imagem da Notícia">
+          <h2 class="news-title">VOCÊ SABIA: O BONDE DE SANTA TERESA É UM MEIO DE TRANSPORTE ECO FRIENDLY </h2>
+          <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed justo non leo tristique fringilla. Quisque volutpat orci vel neque mollis, sit amet vehicula tellus consectetur. Etiam eget tortor malesuada, feugiat elit at, posuere orci.</p>
+          <a href="">CLIQUE AQUI PARA LER MAIS</a>
+        </div>
+      </div>
+      <h2 class="titulo-geral">RESPONSABILIDADE AMBIENTAL</h2>
+      <div class="ambiental">
+        <div class="news-topic">
+          <img class="news-image" src="/Imagem/bonde3.jpg" alt="Imagem da Notícia">
+          <h2 class="news-title">PESQUISA REVELA:7 EM CADA 10 PESSOAS SE PREOCUPAM EM DIMINUIR A EMISSÃO DE CO2</h2>
+          <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed justo non leo tristique fringilla. Quisque volutpat orci vel neque mollis, sit amet vehicula tellus consectetur. Etiam eget tortor malesuada, feugiat elit at, posuere orci.</p>
+          <a href="">CLIQUE AQUI PARA LER MAIS</a>
+        </div>
+        <div class="news-topic">
+          <img class="news-image" src="/Imagem/bike.jpg" alt="Imagem da Notícia">
+          <h2 class="news-title">DIA MUNDIAL SEM CARRO: POR QUE DEVO ADERIR AO MOVIMENTO</h2>
+          <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed justo non leo tristique fringilla. Quisque volutpat orci vel neque mollis, sit amet vehicula tellus consectetur. Etiam eget tortor malesuada, feugiat elit at, posuere orci.</p>
+          <a href="">CLIQUE AQUI PARA LER MAIS</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <p>&copy;
+    <h3> Companhia Estadual de Engenharia de Transportes e Logística </h3>
+    Av. Nossa Senhora de Copacabana, 493 - 5° Andar - Copacabana, Rio de Janeiro, RJ - CEP 22.031-000
+    CNPJ: 04.585.463/0001-13</p>
+  </footer>
+</body>
+
+</html>
