@@ -1,16 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f0f0f0;
     }
+
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      height: 400px;
+      /* Largura do carrossel */
+      margin: 0 auto;
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .carousel-item {
+      flex: 0 0 100%;
+      /* Largura de cada item */
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      /* Faz a imagem cobrir todo o espaço */
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .carousel-control {
+      cursor: pointer;
+      margin: 0 5px;
+      font-size: 24px;
+    }
+
+    /*CARROSEL TOPO*/
+
 
     header {
       background-color: #333;
@@ -54,7 +95,7 @@
       padding: 10px;
     }
 
-    .container-destaques{
+    .container-destaques {
       text-align: center;
       align-items: center;
     }
@@ -71,7 +112,7 @@
       flex: 1;
       padding: 10px;
       display: flex;
-      flex-direction:column;
+      flex-direction: column;
       text-align: center;
     }
 
@@ -168,15 +209,51 @@
       justify-content: center;
     }
   </style>
-
-  <div class="capa">
-    <img src="./Imagem/bd2.jpg" alt="bondinho">
-  </div>
 </head>
 
 <body>
-  <main>
+  <div class="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="/Imagem/bondinho.jpg" alt="Imagem 1">
+      </div>
+      <div class="carousel-item">
+        <img src="/Imagem/bondinho.jpg" alt="Imagem 2">
+      </div>
+      <div class="carousel-item">
+        <img src="/Imagem/bondinho.jpg" alt="Imagem 3">
+      </div>
+    </div>
+  </div>
 
+  <div class="carousel-controls">
+    <span class="carousel-control" onclick="prevSlide()">&#10094;</span>
+    <span class="carousel-control" onclick="nextSlide()">&#10095;</span>
+  </div>
+
+  <script>
+    const carouselInner = document.querySelector('.carousel-inner');
+    let slideIndex = 0;
+
+    function showSlide(index) {
+      if (index < 0) {
+        index = 2;
+      } else if (index > 2) {
+        index = 0;
+      }
+      carouselInner.style.transform = `translateX(-${index * 100}%)`;
+      slideIndex = index;
+    }
+
+    function prevSlide() {
+      showSlide(slideIndex - 1);
+    }
+
+    function nextSlide() {
+      showSlide(slideIndex + 1);
+    }
+  </script>
+  <main>
     <article>
       <h2 class="titulo-geral">Destaques</h2>
       <div class="column-container1">
@@ -189,8 +266,7 @@
           <p class="news-text1">Conteúdo da Notícia 2...</p>
         </div>
         <div class="column1">
-          <img class="news-image1" src="./Imagem/caminhao_descarte_lampadas.png" alt="Imagem 3"
-          height="200px">
+          <img class="news-image1" src="./Imagem/caminhao_descarte_lampadas.png" alt="Imagem 3" height="200px">
           <p class="news-text1">Conteúdo da Notícia 3...</p>
         </div>
       </div>
@@ -258,6 +334,7 @@
     Av. Nossa Senhora de Copacabana, 493 - 5° Andar - Copacabana, Rio de Janeiro, RJ - CEP 22.031-000
     CNPJ: 04.585.463/0001-13</p>
   </footer>
+
 </body>
 
 </html>
