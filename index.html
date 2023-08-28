@@ -94,27 +94,42 @@
       padding: 10px;
     }
 
-    .container-destaques {
+    .container-destaques2 {
       text-align: center;
       align-items: center;
     }
 
-    .column-container1 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 0.2fr));
-      justify-content: center;
-      background-color: #38a99c;
-      border-radius: 10px;
-    }
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-    @media (max-width: 768px) {
-    .column-container1{
-      display: flex;
-    background-color: #38a99c;
-    border-radius: 10px;
-    
+.news-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.news-item2 {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.news-item2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .news-item {
+        flex-basis: calc(50% - 20px);
     }
-  }
+}
+
 
 
     .column1 {
@@ -273,19 +288,23 @@
   <main>
     <article>
       <h2 class="titulo-geral">DESTAQUES</h2>
-      <div class="column-container1">
-        <div class="column1">
-          <img class="news-image1" src="./Imagem/reaproveitamento_de_agua_resized.png" alt="Imagem1">
-          <p class="news-text1">Conteúdo da Notícia 1...</p>
+      <div class="news-container2">
+        <div class="news-item2">
+            <img src="/Imagem/reaproveitamento_de_agua_resized.png" alt="Notícia 1">
+            <h2>Título da Notícia 1</h2>
+            <p>Descrição da notícia 1...</p>
         </div>
-        <div class="column1">
-          <img class="news-image1" src="./Imagem/azuu.jpg" alt="Imagem2">
-          <p class="news-text1">Conteúdo da Notícia 2...</p>
+        <div class="news-item2">
+            <img src="/Imagem/azuu.jpg" alt="Notícia 2">
+            <h2>Título da Notícia 2</h2>
+            <p>Descrição da notícia 2...</p>
         </div>
-        <div class="column1">
-          <img class="news-image1" src="./Imagem/caminhao_descarte_lampadas_resized.png" alt="Imagem3">
-          <p class="news-text1">Conteúdo da Notícia 3...</p>
+        <div class="news-item2">
+            <img src="/Imagem/caminhao_descarte_lampadas_resized.png" alt="Notícia 3">
+            <h2>Título da Notícia 3</h2>
+            <p>Descrição da notícia 3...</p>
         </div>
+    </div>
       </div>
     </article>
     <article>
